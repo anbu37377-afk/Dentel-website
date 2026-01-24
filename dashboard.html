@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | NeonSmile Dental</title>
+
+  <!-- GLOBAL FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+  <div class="dashboard-layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="dashboard-sidebar">
+      <a href="index.html" class="sidebar-brand">
+        <span class="logo">🦷</span>
+        <span>NeonSmile</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="portal-appointments.html">Appointments</a>
+        <a href="portal-records.html">Medical Records</a>
+        <a href="contact.html">Support</a>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN ========== -->
+    <main class="dashboard-content">
+
+      <!-- HEADER -->
+      <section class="dashboard-header glass-panel">
+        <h1>Welcome Back</h1>
+        <p>Your dental care overview at a glance.</p>
+      </section>
+
+      <!-- STATS -->
+      <section class="section">
+        <div class="grid-3">
+
+          <div class="neo-card text-only">
+            <h3>Upcoming Appointments</h3>
+            <p>2 Scheduled Visits</p>
+          </div>
+
+          <div class="neo-card text-only">
+            <h3>Completed Treatments</h3>
+            <p>5 Treatments</p>
+          </div>
+
+          <div class="neo-card text-only">
+            <h3>Doctors Assigned</h3>
+            <p>3 Specialists</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- QUICK ACTIONS -->
+      <section class="section alt">
+        <h2>Quick Actions</h2>
+
+        <div class="grid-2">
+          <div class="neo-card text-only">
+            <h3>Book Appointment</h3>
+            <p>Request a new visit with our specialists.</p>
+            <a href="portal-appointments.html" class="btn-secondary">View Appointments</a>
+          </div>
+
+          <div class="neo-card text-only">
+            <h3>View Medical Records</h3>
+            <p>Access your dental history securely.</p>
+            <a href="portal-records.html" class="btn-secondary">View Records</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

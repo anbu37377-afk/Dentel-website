@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Appointments | NeonSmile Dental</title>
+
+  <!-- GLOBAL FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+  <!-- ================= DASHBOARD LAYOUT ================= -->
+  <div class="dashboard-layout">
+
+    <!-- ========== SIDE MENU ========== -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <span class="logo">🦷</span>
+        <span>NeonSmile</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portal-appointments.html" class="active">Appointments</a>
+        <a href="portal-records.html">Medical Records</a>
+        <a href="contact.html">Support</a>
+
+        <li>
+          <button class="theme-toggle" title="Toggle theme">🌙</button>
+        </li>
+        <li><a href="login.html"class="btn-nav">Login</a></li>
+
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+
+
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="dashboard-content">
+
+      <section class="dashboard-header glass-panel">
+        <h1>My Appointments</h1>
+        <p>
+          View your upcoming visits, appointment history, and treatment
+          schedules.
+        </p>
+        <a href="contact.html" class="btn-primary">Request New Appointment</a>
+      </section>
+
+      <!-- ================= UPCOMING ================= -->
+      <section class="section">
+        <h2>Upcoming Appointments</h2>
+
+        <div class="grid-2">
+
+          <div class="neo-card appointment-card">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
+              alt="Dental consultation"
+            />
+            <h3>Dental Implant Consultation</h3>
+            <p><strong>Date:</strong> 18 Aug 2026</p>
+            <p><strong>Doctor:</strong> Dr. Emily Carter</p>
+            <p><strong>Status:</strong> Confirmed</p>
+          </div>
+
+          <div class="neo-card appointment-card">
+            <img
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787"
+              alt="Orthodontic checkup"
+            />
+            <h3>Orthodontic Review</h3>
+            <p><strong>Date:</strong> 02 Sep 2026</p>
+            <p><strong>Doctor:</strong> Dr. Sophia Lin</p>
+            <p><strong>Status:</strong> Pending</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= HISTORY ================= -->
+      <section class="section alt">
+        <h2>Past Appointments</h2>
+
+        <div class="grid-3">
+
+          <div class="neo-card appointment-card">
+            <img
+              src="https://images.unsplash.com/photo-1606813902914-96bcaac3c0d4"
+              alt="Dental checkup"
+            />
+            <h3>Routine Dental Checkup</h3>
+            <p>12 May 2026</p>
+            <span class="status completed">Completed</span>
+          </div>
+
+          <div class="neo-card appointment-card">
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09"
+              alt="Root canal treatment"
+            />
+            <h3>Root Canal Therapy</h3>
+            <p>03 March 2026</p>
+            <span class="status completed">Completed</span>
+          </div>
+
+          <div class="neo-card appointment-card">
+            <img
+              src="https://images.unsplash.com/photo-1600959907703-125ba1374a12"
+              alt="Teeth cleaning"
+            />
+            <h3>Professional Cleaning</h3>
+            <p>20 Jan 2026</p>
+            <span class="status completed">Completed</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Records | NeonSmile Dental</title>
+
+  <!-- GLOBAL FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+
+  <div class="dashboard-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-brand">
+        <span class="logo">🦷</span>
+        <span>NeonSmile</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="portal-appointments.html">Appointments</a>
+        <a href="portal-records.html" class="active">Medical Records</a>
+        <a href="contact.html">Support</a>
+
+        <li>
+            <button class="theme-toggle" title="Toggle theme">🌙</button>
+          </li>
+          <li><a href="login.html"class="btn-nav">Login</a></li>
+          <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+
+      </nav>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="dashboard-content">
+
+      <!-- HEADER -->
+      <section class="dashboard-header glass-panel">
+        <h1>My Medical Records</h1>
+        <p>
+          Secure access to your dental history, treatment reports, and imaging
+          records.
+        </p>
+      </section>
+
+      <!-- RECORDS OVERVIEW -->
+      <section class="section">
+        <h2>Available Records</h2>
+
+        <div class="grid-3">
+
+          <div class="neo-card record-card">
+            <img
+              src="https://images.unsplash.com/photo-1606813902914-96bcaac3c0d4"
+              alt="Dental x-ray report"
+            />
+            <h3>Dental X-Ray Report</h3>
+            <p>Updated: June 2026</p>
+            <a href="#" class="btn-secondary">Download PDF</a>
+          </div>
+
+          <div class="neo-card record-card">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
+              alt="Implant treatment record"
+            />
+            <h3>Implant Treatment Summary</h3>
+            <p>Updated: May 2026</p>
+            <a href="#" class="btn-secondary">Download PDF</a>
+          </div>
+
+          <div class="neo-card record-card">
+            <img
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09"
+              alt="Orthodontic assessment"
+            />
+            <h3>Orthodontic Assessment</h3>
+            <p>Updated: March 2026</p>
+            <a href="#" class="btn-secondary">Download PDF</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- IMAGING -->
+      <section class="section alt">
+        <h2>Imaging & Diagnostics</h2>
+
+        <div class="grid-2">
+
+          <div class="neo-card record-card">
+            <img
+              src="https://images.unsplash.com/photo-1600959907703-125ba1374a12"
+              alt="Dental scan"
+            />
+            <h3>3D Dental Scan</h3>
+            <p>
+              High-resolution imaging used for implant and surgical planning.
+            </p>
+            <a href="#" class="btn-secondary">View Details</a>
+          </div>
+
+          <div class="neo-card record-card">
+            <img
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787"
+              alt="Dental examination report"
+            />
+            <h3>Routine Examination Notes</h3>
+            <p>
+              Clinical notes and findings from your most recent dental visits.
+            </p>
+            <a href="#" class="btn-secondary">View Details</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECURITY NOTE -->
+      <section class="section cta-strip">
+        <h2>Your Records Are Secure</h2>
+        <p>
+          All medical records are encrypted and accessible only to you and your
+          care providers.
+        </p>
+        <a href="contact.html" class="btn-primary">Contact Support</a>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
