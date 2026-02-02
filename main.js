@@ -9,16 +9,38 @@ if (savedTheme === "light") {
   root.classList.add("light");
 }
 
-// Toggle theme
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    root.classList.toggle("light");
+// Toggle theme (Supports multiple buttons)
+const themeToggles = document.querySelectorAll(".theme-toggle, .theme-toggle-sidebar");
 
-    if (root.classList.contains("light")) {
-      localStorage.setItem("theme", "light");
-    } else {
-      localStorage.setItem("theme", "dark");
+if (themeToggles.length > 0) {
+  themeToggles.forEach(toggle => {
+    // Set initial icon
+    toggle.innerHTML = root.classList.contains("light")
+      ? `🌙 <span class="theme-text">Dark Mode</span>`
+      : `🌞 <span class="theme-text">Light Mode</span>`;
+
+    // Simpler icon for navbar toggle if needed based on class
+    if (toggle.classList.contains('theme-toggle')) {
+      toggle.textContent = root.classList.contains("light") ? "🌞" : "🌙";
     }
+
+    toggle.addEventListener("click", () => {
+      root.classList.toggle("light");
+
+      const isLight = root.classList.contains("light");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+
+      // Update ALL toggles
+      themeToggles.forEach(t => {
+        if (t.classList.contains('theme-toggle')) {
+          t.textContent = isLight ? "🌞" : "🌙";
+        } else {
+          t.innerHTML = isLight
+            ? `🌙 <span class="theme-text">Dark Mode</span>`
+            : `🌞 <span class="theme-text">Light Mode</span>`;
+        }
+      });
+    });
   });
 }
 
@@ -47,18 +69,30 @@ document.querySelectorAll("form").forEach(form => {
   });
 });
 
+/* ================= DASHBOARD MOBILE DRAWER ================= */
+const dashboardToggle = document.querySelector(".dashboard-nav-toggle");
+const dashboardSidebar = document.querySelector(".dashboard-sidebar");
+const dashboardOverlay = document.querySelector(".dashboard-overlay");
 
-
-
-if (themeToggle) {
-  themeToggle.textContent = root.classList.contains("light") ? "🌞" : "🌙";
-
-  themeToggle.addEventListener("click", () => {
-    setTimeout(() => {
-      themeToggle.textContent = root.classList.contains("light") ? "🌞" : "🌙";
-    }, 50);
+if (dashboardToggle && dashboardSidebar) {
+  dashboardToggle.addEventListener("click", () => {
+    dashboardSidebar.classList.toggle("open");
+    // Also toggle body class for scroll locking/overlay targeting if needed
+    document.body.classList.toggle("dashboard-open");
   });
 }
+
+if (dashboardOverlay) {
+  dashboardOverlay.addEventListener("click", () => {
+    dashboardSidebar.classList.remove("open");
+    document.body.classList.remove("dashboard-open");
+  });
+}
+
+
+
+
+
 
 
 

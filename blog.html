@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,10 +17,10 @@
   <!-- ================= NAVBAR ================= -->
   <header class="nav-wrapper">
     <nav class="nav container">
-      <div class="nav-brand">
+      <a href="index.html" class="nav-brand">
         <span class="logo">🦷</span>
         <span class="brand-name">NeonSmile Dental</span>
-      </div>
+      </a>
 
       <button class="nav-toggle" aria-label="Open menu">☰</button>
 
@@ -30,11 +31,13 @@
         <li><a href="doctors.html">Doctors</a></li>
         <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-            <button class="theme-toggle" title="Toggle theme">🌙</button>
-          </li>
+        <li><a href="dashboard.html">Dashboard</a></li>
 
-        <li><a href="login.html"class="btn-nav">Login</a></li>
+        <li>
+          <button class="theme-toggle" title="Toggle theme">🌙</button>
+        </li>
+
+        <li><a href="login.html" class="btn-nav">Login</a></li>
 
         <li><a href="register.html" class="btn-nav">Sign Up</a></li>
       </ul>
@@ -50,15 +53,33 @@
     </p>
   </section>
 
+  <!-- ================= CATEGORIES ================= -->
+  <section class="section alt">
+    <div class="container" style="text-align:center;">
+      <h2 style="margin-bottom:2rem;">Popular Topics</h2>
+      <div class="grid-3">
+        <a href="#" class="neo-card" style="padding:1rem; display:block;">
+          <span style="font-size:2rem;">🦷</span>
+          <h3>Oral Hygiene</h3>
+        </a>
+        <a href="#" class="neo-card" style="padding:1rem; display:block;">
+          <span style="font-size:2rem;">✨</span>
+          <h3>Cosmetic</h3>
+        </a>
+        <a href="#" class="neo-card" style="padding:1rem; display:block;">
+          <span style="font-size:2rem;">🛡️</span>
+          <h3>Preventive</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= BLOG GRID ================= -->
   <section class="section">
     <div class="grid-3 container">
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0"
-          alt="Teeth whitening tips"
-        />
+        <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0" alt="Teeth whitening tips" />
         <h3>How Professional Whitening Really Works</h3>
         <p>
           Learn the science behind in-clinic whitening and why it’s safer and
@@ -68,10 +89,7 @@
       </article>
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
-          alt="Dental implants guide"
-        />
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Dental implants guide" />
         <h3>Dental Implants: What to Expect</h3>
         <p>
           A step-by-step guide explaining implant procedures, recovery time,
@@ -81,10 +99,7 @@
       </article>
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787"
-          alt="Orthodontic treatment"
-        />
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787" alt="Orthodontic treatment" />
         <h3>Braces vs Clear Aligners</h3>
         <p>
           Understand the differences between traditional braces and modern
@@ -94,10 +109,7 @@
       </article>
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0"
-          alt="Preventive dental care"
-        />
+        <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0" alt="Preventive dental care" />
         <h3>Why Preventive Dental Care Matters</h3>
         <p>
           Discover how routine checkups help prevent major dental problems and
@@ -107,10 +119,7 @@
       </article>
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09"
-          alt="Root canal treatment"
-        />
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09" alt="Root canal treatment" />
         <h3>Is Root Canal Treatment Painful?</h3>
         <p>
           Modern techniques have transformed root canals into comfortable,
@@ -120,10 +129,7 @@
       </article>
 
       <article class="neo-card blog-card">
-        <img
-          src="https://images.unsplash.com/photo-1600959907703-125ba1374a12"
-          alt="Healthy smile habits"
-        />
+        <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Healthy smile habits" />
         <h3>Daily Habits for a Healthier Smile</h3>
         <p>
           Simple routines and professional advice to maintain oral health for
@@ -135,6 +141,21 @@
     </div>
   </section>
 
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="section">
+    <div class="container neo-card"
+      style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:3rem;">
+      <h2>Stay Updated</h2>
+      <p style="max-width:500px; margin-bottom:1.5rem;">Join 5,000+ subscribers getting the latest dental health tips
+        and exclusive offers.</p>
+      <form style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; width:100%; max-width:500px;">
+        <input type="email" placeholder="Enter your email" required
+          style="padding:0.8rem; border-radius:var(--radius); border:none; flex:1; min-width:200px;">
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
   <!-- ================= CTA ================= -->
   <section class="section cta-strip">
     <h2>Have a Dental Question?</h2>
@@ -143,15 +164,15 @@
       decisions about your oral health.
     </p>
     <div style="display:flex; justify-content:center; margin-top:1.5rem;">
-        <a href="contact.html" class="btn-primary">Book Appointment</a>
-      </div>
+      <a href="contact.html" class="btn-primary">Book Appointment</a>
+    </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="footer-container container">
-  
+
       <!-- BRAND COLUMN -->
       <div class="footer-brand">
         <div class="footer-logo">
@@ -161,15 +182,35 @@
         <p>
           Modern dental care with a gentle, patient-first approach.
         </p>
-  
+
         <div class="footer-social">
-          <a href="#" aria-label="Facebook">🌐</a>
-          <a href="#" aria-label="Instagram">📸</a>
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.41c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.326.975.975 1.264 2.242 1.326 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.326 3.608-.975.975-2.242 1.264-3.608 1.326-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.326-.975-.975-1.264-2.242-1.326-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.326-3.608.975-.975 2.242-1.264 3.608-1.326C8.416 2.175 8.796 2.163 12 2.163z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M24 4.557a9.93 9.93 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482A13.94 13.94 0 011.671 3.149a4.916 4.916 0 001.523 6.573 4.897 4.897 0 01-2.229-.616v.061a4.917 4.917 0 003.946 4.827 4.996 4.996 0 01-2.224.084 4.919 4.919 0 004.588 3.417A9.867 9.867 0 010 19.54a13.94 13.94 0 007.548 2.212c9.056 0 14.01-7.496 14.01-13.986 0-.21-.006-.423-.016-.635A10.012 10.012 0 0024 4.557z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5S0 4.881 0 3.5C0 2.12 1.11 1 2.48 1s2.5 1.12 2.5 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+            </svg>
+          </a>
         </div>
       </div>
-  
+
       <!-- QUICK LINKS -->
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -178,7 +219,7 @@
         <a href="services.html">Services</a>
         <a href="doctors.html">Doctors</a>
       </div>
-  
+
       <!-- RESOURCES -->
       <div class="footer-col">
         <h4>Resources</h4>
@@ -187,7 +228,7 @@
         <a href="login.html">Login</a>
         <a href="register.html">Sign Up</a>
       </div>
-  
+
       <!-- CONTACT -->
       <div class="footer-col">
         <h4>Contact Us</h4>
@@ -195,9 +236,9 @@
         <p>📞 +1 (555) 123-4567</p>
         <p>✉️ hello@neonsmile.com</p>
       </div>
-  
+
     </div>
-  
+
     <div class="footer-bottom">
       © 2026 NeonSmile Dental. All rights reserved.
     </div>
@@ -205,5 +246,5 @@
 
   <script src="main.js"></script>
 </body>
-</html>
 
+</html>

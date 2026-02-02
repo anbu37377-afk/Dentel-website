@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,61 +29,112 @@
         <a href="portal-records.html">Medical Records</a>
         <a href="contact.html">Support</a>
       </nav>
+
+      <div class="sidebar-actions">
+        <!-- THEME & AUTH -->
+        <button class="theme-toggle-sidebar" title="Toggle theme">
+          🌙 <span class="theme-text">Dark Mode</span>
+        </button>
+        <a href="login.html" class="sidebar-btn login">Login</a>
+        <a href="register.html" class="sidebar-btn signup">Sign Up</a>
+      </div>
     </aside>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="dashboard-overlay"></div>
 
     <!-- ========== MAIN ========== -->
     <main class="dashboard-content">
-
+      <!-- MOBILE MENU BUTTON & HEADER -->
+      <div class="dashboard-mobile-header">
+        <a href="index.html" class="mobile-brand">
+          <span class="logo">🦷</span> NeonSmile
+        </a>
+        <button class="dashboard-nav-toggle">☰</button>
+      </div>
       <!-- HEADER -->
-      <section class="dashboard-header glass-panel">
+      <section class="dashboard-header glass-panel container">
         <h1>Welcome Back</h1>
         <p>Your dental care overview at a glance.</p>
       </section>
 
-      <!-- STATS -->
+      <!-- STATS (4-Card Image Format) -->
       <section class="section">
-        <div class="grid-3">
+        <div class="dashboard-stats-grid container">
 
-          <div class="neo-card text-only">
-            <h3>Upcoming Appointments</h3>
-            <p>2 Scheduled Visits</p>
+          <!-- Card 1: Upcoming -->
+          <div class="neo-card dash-card">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95" alt="Upcoming"
+              class="dash-card-img">
+            <div class="dash-card-content">
+              <h3>Upcoming</h3>
+              <p class="stat-value">2 Visits</p>
+            </div>
           </div>
 
-          <div class="neo-card text-only">
-            <h3>Completed Treatments</h3>
-            <p>5 Treatments</p>
+          <!-- Card 2: Completed -->
+          <div class="neo-card dash-card">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Completed"
+              class="dash-card-img">
+            <div class="dash-card-content">
+              <h3>Treatments</h3>
+              <p class="stat-value">5 Done</p>
+            </div>
           </div>
 
-          <div class="neo-card text-only">
-            <h3>Doctors Assigned</h3>
-            <p>3 Specialists</p>
+          <!-- Card 3: Doctors -->
+          <div class="neo-card dash-card">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09" alt="Doctors" class="dash-card-img">
+            <div class="dash-card-content">
+              <h3>Specialists</h3>
+              <p class="stat-value">3 Active</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Records -->
+          <div class="neo-card dash-card">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d" alt="Records" class="dash-card-img">
+            <div class="dash-card-content">
+              <h3>Records</h3>
+              <p class="stat-value">12 Files</p>
+            </div>
           </div>
 
         </div>
+
+
       </section>
 
       <!-- QUICK ACTIONS -->
       <section class="section alt">
-        <h2>Quick Actions</h2>
+        <div class="container">
+          <h2>Quick Actions</h2>
 
-        <div class="grid-2">
-          <div class="neo-card text-only">
-            <h3>Book Appointment</h3>
-            <p>Request a new visit with our specialists.</p>
-            <a href="portal-appointments.html" class="btn-secondary">View Appointments</a>
+          <div class="grid-2">
+            <div class="neo-card action-card">
+              <div class="action-icon">📅</div>
+              <h3>Book Appointment</h3>
+              <p>Request a new visit with our specialists.</p>
+              <a href="portal-appointments.html" class="btn-secondary">View Appointments</a>
+            </div>
+
+            <div class="neo-card action-card">
+              <div class="action-icon">📂</div>
+              <h3>Medical Records</h3>
+              <p>Access your dental history securely.</p>
+              <a href="portal-records.html" class="btn-secondary">View Records</a>
+            </div>
           </div>
 
-          <div class="neo-card text-only">
-            <h3>View Medical Records</h3>
-            <p>Access your dental history securely.</p>
-            <a href="portal-records.html" class="btn-secondary">View Records</a>
-          </div>
         </div>
       </section>
+
+
 
     </main>
   </div>
 
   <script src="main.js"></script>
 </body>
+
 </html>

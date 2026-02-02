@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,28 +18,40 @@
 
     <!-- ================= SIDEBAR ================= -->
     <aside class="dashboard-sidebar">
-      <div class="sidebar-brand">
+      <a href="index.html" class="sidebar-brand">
         <span class="logo">🦷</span>
         <span>NeonSmile</span>
-      </div>
+      </a>
 
       <nav class="sidebar-nav">
         <a href="dashboard.html">Dashboard</a>
         <a href="portal-appointments.html">Appointments</a>
         <a href="portal-records.html" class="active">Medical Records</a>
         <a href="contact.html">Support</a>
-
-        <li>
-            <button class="theme-toggle" title="Toggle theme">🌙</button>
-          </li>
-          <li><a href="login.html"class="btn-nav">Login</a></li>
-          <li><a href="register.html" class="btn-nav">Sign Up</a></li>
-
       </nav>
+
+      <div class="sidebar-actions">
+        <!-- THEME & AUTH -->
+        <button class="theme-toggle-sidebar" title="Toggle theme">
+          🌙 <span class="theme-text">Dark Mode</span>
+        </button>
+        <a href="login.html" class="sidebar-btn login">Login</a>
+        <a href="register.html" class="sidebar-btn signup">Sign Up</a>
+      </div>
     </aside>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="dashboard-overlay"></div>
 
     <!-- ================= MAIN ================= -->
     <main class="dashboard-content">
+      <!-- MOBILE MENU BUTTON & HEADER -->
+      <div class="dashboard-mobile-header">
+        <a href="index.html" class="mobile-brand">
+          <span class="logo">🦷</span> NeonSmile
+        </a>
+        <button class="dashboard-nav-toggle">☰</button>
+      </div>
 
       <!-- HEADER -->
       <section class="dashboard-header glass-panel">
@@ -56,30 +69,21 @@
         <div class="grid-3">
 
           <div class="neo-card record-card">
-            <img
-              src="https://images.unsplash.com/photo-1606813902914-96bcaac3c0d4"
-              alt="Dental x-ray report"
-            />
+            <img src="https://3sixtydental.com/wp-content/uploads/2022/11/OPG.jpg" alt="Dental x-ray report" />
             <h3>Dental X-Ray Report</h3>
             <p>Updated: June 2026</p>
             <a href="#" class="btn-secondary">Download PDF</a>
           </div>
 
           <div class="neo-card record-card">
-            <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5"
-              alt="Implant treatment record"
-            />
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Implant treatment record" />
             <h3>Implant Treatment Summary</h3>
             <p>Updated: May 2026</p>
             <a href="#" class="btn-secondary">Download PDF</a>
           </div>
 
           <div class="neo-card record-card">
-            <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09"
-              alt="Orthodontic assessment"
-            />
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09" alt="Orthodontic assessment" />
             <h3>Orthodontic Assessment</h3>
             <p>Updated: March 2026</p>
             <a href="#" class="btn-secondary">Download PDF</a>
@@ -95,10 +99,7 @@
         <div class="grid-2">
 
           <div class="neo-card record-card">
-            <img
-              src="https://images.unsplash.com/photo-1600959907703-125ba1374a12"
-              alt="Dental scan"
-            />
+            <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Dental scan" />
             <h3>3D Dental Scan</h3>
             <p>
               High-resolution imaging used for implant and surgical planning.
@@ -107,10 +108,7 @@
           </div>
 
           <div class="neo-card record-card">
-            <img
-              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787"
-              alt="Dental examination report"
-            />
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787" alt="Dental examination report" />
             <h3>Routine Examination Notes</h3>
             <p>
               Clinical notes and findings from your most recent dental visits.
@@ -136,4 +134,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
