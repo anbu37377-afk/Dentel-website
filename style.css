@@ -1,20 +1,22 @@
 /* ========== CSS VARIABLES ========== */
 :root {
-  --bg-dark: #0b0f14;
-  --bg-light: #f4f6f8;
-  --card-bg: rgba(255, 255, 255, 0.06);
-  --glass-bg: rgba(255, 255, 255, 0.08);
+  --bg-dark: #0f172a;
+  --bg-light: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.06);
   --text: #ffffff;
-  --text: #ffffff;
-  --text-muted: #b5b8bd;
-  --text-hover: #b5b8bd;
-  /* Fallback */
+  --text-muted: #94a3b8;
+  --text-hover: #cbd5e1;
 
-  --neon: #00ffd5;
+  /* Professional Medical Blue */
+  --primary: #0ea5e9;
+  --primary-dark: #0284c7;
+  --neon: #0ea5e9;
+  /* Kept for compatibility */
 
-  --radius: 1.2rem;
-  --blur: 14px;
-  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --radius: 1rem;
+  --blur: 16px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* ========== BASE ========== */
@@ -161,6 +163,7 @@ a {
   color: #fff;
   justify-content: center;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 /* Sidebar Nav */
@@ -222,6 +225,18 @@ a {
 .sidebar-btn.login {
   border: 1px solid var(--text-muted);
   color: var(--text);
+}
+
+.sidebar-btn.logout {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.sidebar-btn.logout:hover {
+  background: rgba(255, 71, 71, 0.1);
+  border-color: #ff4747;
+  color: #ff4747;
 }
 
 .sidebar-btn.signup {
@@ -493,7 +508,7 @@ a {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -501,20 +516,27 @@ a {
 
 .nav-links a {
   opacity: 0.85;
+  transition: all 0.3s ease;
 }
 
 .nav-links a.active,
-.nav-links a:hover {
+.nav-links a:hover:not(.btn-nav) {
   color: var(--neon);
   opacity: 1;
 }
 
 .btn-nav {
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.4rem;
   border-radius: 999px;
   background: var(--neon);
-  color: #000;
+  color: #000 !important;
   font-weight: 600;
+}
+
+.btn-nav:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 255, 213, 0.3);
 }
 
 /* ========== HAMBURGER ========== */
@@ -551,11 +573,11 @@ a {
 
 /* ========== SECTIONS ========== */
 .section {
-  padding: clamp(3rem, 6vw, 6rem) 0;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
 }
 
 .section.alt {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .section h1,
@@ -565,17 +587,21 @@ a {
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 2.5rem;
+}
+
 /* ========== HERO SPLIT (HOME 2) ========== */
 .hero-split {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
 .hero-text h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 0.8rem;
 }
 
 .hero-text p {
@@ -629,11 +655,11 @@ a {
 
 /* ========== PAGE HERO (SERVICES ETC) ========== */
 .page-hero {
-  padding: clamp(4rem, 8vw, 7rem) 0;
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
 }
 
 .page-hero h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
 }
 
 .page-hero p {
@@ -645,8 +671,8 @@ a {
 /* ========== CTA STRIP ========== */
 .cta-strip {
   background: linear-gradient(135deg,
-      rgba(0, 255, 213, 0.15),
-      rgba(0, 255, 213, 0.05));
+      rgba(14, 165, 233, 0.12),
+      rgba(14, 165, 233, 0.04));
   border-radius: var(--radius);
 }
 
@@ -675,7 +701,7 @@ a {
 /* ========== HOME 1 HERO ========== */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 75vh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1049,8 +1075,8 @@ a {
   display: grid;
   place-items: center;
   background: radial-gradient(circle at top,
-      rgba(0, 255, 213, 0.12),
-      #0b0f14 60%);
+      rgba(14, 165, 233, 0.15),
+      var(--bg-dark) 60%);
 }
 
 .login-card {
@@ -1100,8 +1126,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  margin: 0;
 }
 
 .forgot {
@@ -1234,12 +1274,9 @@ a {
   background: none;
   border: none;
   cursor: pointer;
-
-  font-size: 1.4rem;
-  /* 🔹 MEDIUM SIZE ICON */
+  font-size: 1.2rem;
   line-height: 1;
-  padding: 0.4rem;
-
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
