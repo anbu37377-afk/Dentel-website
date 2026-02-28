@@ -503,6 +503,11 @@ a {
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
+  flex-shrink: 0;
+}
+
+.nav-brand .brand-name {
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -549,7 +554,7 @@ a {
 }
 
 /* ========== MOBILE NAV ========== */
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
   .nav-toggle {
     display: block;
   }
@@ -838,6 +843,7 @@ a {
   gap: 0.5rem;
   justify-content: flex-start;
   text-align: left;
+  margin-bottom: 0;
 }
 
 .login-options .remember input {
@@ -1292,7 +1298,7 @@ a {
 
 
 /* ================= MOBILE AUTH BUTTON FIX ================= */
-@media (max-width: 820px) {
+@media (max-width: 1024px) {
 
   /* Stack auth buttons properly */
   .nav-links .btn-nav {
